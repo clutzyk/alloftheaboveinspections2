@@ -1,12 +1,12 @@
-# All of the Above Inspections — Static Site
+# All of the Above Inspections — Dark Premium Single-Page Site
 
-This repo contains a single-file website with built-in theme switcher and transparent pricing.
+This is the complete version matching the screenshots: sticky header, hero (left content + right image), trust cards, services, process, reviews, service area, FAQ, and contact form.
 
-## How to deploy on GitHub Pages
-1. Create a new GitHub repo and upload these files to the repo **root** (not in a subfolder): `index.html`, `robots.txt`, `sitemap.xml`.
-2. Go to **Settings → Pages** and set **Source** to "Deploy from a branch" → `main` → `/ (root)`.
-3. Wait for Pages to build, then visit your site URL shown at the top of the Pages settings.
+## Deploy (GitHub Pages)
+1. Create a new repo and upload these files to the repo root: `index.html`, `robots.txt`, `sitemap.xml`.
+2. Settings → Pages → Deploy from a branch → Branch `main` → Folder `/ (root)`.
+3. Visit the URL GitHub shows in the Pages settings.
 
-## Optional
-- Update links in `sitemap.xml` to match your real domain.
-- Replace the form endpoint if/when you add a form.
+## Notes
+- Update the `form` action to your real Formspree endpoint to receive submissions.
+- Phone and email are hard‑wired across the page.

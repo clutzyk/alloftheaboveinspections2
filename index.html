@@ -1,236 +1,445 @@
 <!doctype html>
-<html lang="en" data-theme="ocean">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home Inspector in New Smyrna Beach, FL | All of the Above Inspections</title>
-  <meta name="description" content="Trusted home inspections in New Smyrna Beach & nearby areas. Fast scheduling, thorough reports with photos, and clear recommendations. Call 407-952-9825 or email christopher@alloftheaboveinspections.com." />
+  <title>All of the Above Inspections | Home Inspector — New Smyrna Beach, FL</title>
+  <meta name="description" content="Fast scheduling, photo-rich reports, and clear recommendations. Serving New Smyrna Beach & Volusia County. Call 407‑952‑9825 or email christopher@alloftheaboveinspections.com." />
   <link rel="canonical" href="https://alloftheaboveinspections.com/" />
+
+  <!-- Social cards -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="All of the Above Inspections — Buy with confidence" />
+  <meta property="og:description" content="Photo‑rich reports. Clear explanations. Serving New Smyrna Beach & Volusia County." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1502005229762-cf1b2da7c08e?q=80&w=1600&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <style>
-    /* THEME VARIABLES */
     :root{
-      --bg:#f6fafc;        /* page background */
-      --text:#1f2937;      /* body text */
-      --muted:#5b6b82;     /* muted text */
-      --card:#ffffff;      /* card background */
-      --border:#e5e7eb;    /* borders */
-      --brand:#0a6cf1;     /* primary */
-      --accent:#22c55e;    /* accent CTA */
-      --brand-contrast:#ffffff;
-      --promo-bg:#eaf3ff;  /* light banner */
-      --promo-border:#cde4ff;
-      --promo-text:#063b8f;
+      --bg:#0B1220;
+      --card:#0F172A;
+      --muted:#94A3B8;
+      --text:#E2E8F0;
+      --brand:#22C55E;   /* emerald */
+      --brand2:#0EA5E9;  /* sky */
+      --ring: rgba(14,165,233,.35);
+      --max:1150px;
+      --radius:18px;
+      --border: rgba(255,255,255,.06);
     }
-    /* Alt theme: Sand */
-    [data-theme="sand"]{
-      --bg:#fffdf7; --text:#3b2f2a; --muted:#7a6a61; --card:#ffffff; --border:#efe6d9;
-      --brand:#c9822e; --accent:#0ea5e9; --brand-contrast:#ffffff;
-      --promo-bg:#fff1dc; --promo-border:#ffe1b7; --promo-text:#7a3e00;
-    }
-    /* Alt theme: Charcoal */
-    [data-theme="charcoal"]{
-      --bg:#0b1220; --text:#e2e8f0; --muted:#94a3b8; --card:#0f172a; --border:#1e293b;
-      --brand:#22c55e; --accent:#0ea5e9; --brand-contrast:#00131f;
-      --promo-bg:#0c2343; --promo-border:#21406c; --promo-text:#b7cdf2;
-    }
-
-    /* Base */
     *{box-sizing:border-box}
-    body {font-family: Arial, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:var(--text);}    
+    html{scroll-behavior:smooth}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--text);font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial}
     a{color:inherit}
-    header {background:var(--brand); color:var(--brand-contrast); padding:1rem; text-align:center; position:sticky; top:0; z-index:20}
-    nav a {color:var(--brand-contrast); margin:0 1rem; text-decoration:none; font-weight:600}
-    .theme-switch{display:flex; gap:.5rem; justify-content:center; align-items:center; margin-top:.5rem}
-    .theme-switch button{border:1px solid rgba(255,255,255,.4); background:rgba(255,255,255,.15); color:#fff; padding:.35rem .6rem; border-radius:999px; cursor:pointer}
-    .theme-switch button.active{background:#fff; color:var(--brand);}
+    .container{max-width:var(--max);margin-inline:auto;padding: clamp(16px,2vw,24px)}
+    .btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.2rem;border-radius:14px;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#07111d;font-weight:700;text-decoration:none;box-shadow:0 10px 24px rgba(14,165,233,.25);transition:.18s transform}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.secondary{background:#0B6CF1;color:white;box-shadow:0 10px 24px rgba(11,108,241,.25)}
+    .btn.ghost{background:transparent;border:1px solid var(--border);color:#cfe4ff}
 
-    .hero {position:relative; text-align:center; color:#fff}
-    .hero img {width:100%; height:500px; object-fit:cover; filter:brightness(65%)}
-    .hero-text {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%)}
-    .hero-text h1 {font-size:2.5rem; margin-bottom:.5rem}
+    .chip{display:inline-flex;align-items:center;gap:.5rem;padding:.45rem .75rem;border-radius:999px;background:#0f223d;color:#9ecfff;border:1px solid #12325a}
+    .badge{padding:.25rem .55rem;border:1px solid #21406c;border-radius:999px;font-size:.8rem;color:#b7cdf2;background:#0c2343}
+    .check{width:22px;height:22px;border-radius:7px;display:inline-grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand2));color:#001827;font-weight:900}
 
-    .container {max-width:1100px; margin:0 auto; padding:2rem}
-    .grid {display:grid; gap:2rem}
-    .grid-3 {grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+    header{position:sticky;top:0;z-index:60;background:rgba(11,18,32,.7);backdrop-filter: blur(10px);border-bottom:1px solid var(--border)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    nav a.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-weight:800;letter-spacing:.2px}
+    .logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#0ea5e9,#22c55e)}
+    .nav-links{display:flex;flex-wrap:wrap;gap:.8rem}
+    .nav-links a{padding:.6rem .8rem;border-radius:10px;color:#c3d5ee;text-decoration:none}
+    .nav-links a:hover{background:#0e203d}
 
-    .card {background:var(--card); padding:1.5rem; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,.05); border:1px solid var(--border)}
+    /* HERO */
+    .hero{position:relative;overflow:hidden}
+    .hero::before{content:"";position:absolute;inset:-40% -10% 0 -10%;background:
+      radial-gradient(50% 50% at 50% 0%, rgba(14,165,233,.35) 0%, rgba(14,165,233,0) 60%),
+      radial-gradient(40% 40% at 80% 10%, rgba(34,197,94,.25) 0%, rgba(34,197,94,0) 60%),
+      linear-gradient(180deg, rgba(2,6,23,.2), transparent 40%);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(16px,3vw,28px);align-items:center}
+    .hero h1{font-size: clamp(2rem, 3.4vw + .8rem, 3.6rem);line-height:1.05;margin:0}
+    .hero p{font-size: clamp(1rem, .5vw + .7rem, 1.2rem);color:#c8d6ee}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .hero-figure{position:relative;height:100%;min-height:340px;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02))}
+    .hero-figure img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05)}
 
-    table.pricing {width:100%; border-collapse:collapse; margin-top:1rem}
-    table.pricing th, table.pricing td {border:1px solid var(--border); padding:0.75rem; text-align:left}
-    table.pricing th {background:var(--brand); color:var(--brand-contrast)}
-    .discount {color:var(--brand); font-weight:bold}
+    /* GRID UTIL */
+    .grid{display:grid;gap:clamp(14px,1.8vw,22px)}
+    .grid-3{grid-template-columns:repeat(3,1fr)}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
 
-    footer {background:var(--brand); color:var(--brand-contrast); text-align:center; padding:1rem; margin-top:2rem}
+    /* Cards */
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:clamp(16px,1.2vw,22px)}
+    .card h3{margin:.1rem 0 .4rem}
+    .lead{color:#cbd5e1}
+    .muted{color:var(--muted)}
 
-    .promo{background:var(--promo-bg); border:1px solid var(--promo-border); color:var(--promo-text); padding:.9rem 1rem; text-align:center}
-    .promo strong{font-weight:700}
-    .promo a{display:inline-block; margin-left:.6rem; background:var(--brand); color:#fff; text-decoration:none; padding:.55rem .9rem; border-radius:8px}
+    /* Services special pill */
+    .pill{display:inline-block;padding:.35rem .8rem;border-radius:12px;background:#0c2343;border:1px solid #21406c;color:#b7cdf2}
 
-    .btn{display:inline-block; text-decoration:none; padding:.75rem 1.25rem; border-radius:8px; font-weight:700}
-    .btn-accent{background:var(--accent); color:#fff}
-    .btn-brand{background:var(--brand); color:var(--brand-contrast)}
+    /* Inputs */
+    input, textarea{font:inherit}
+    .field{margin:.3rem 0 1rem}
+    .control{padding:.85rem;border-radius:14px;border:1px solid rgba(255,255,255,.12);width:100%;background:#0b1323;color:#e6edf7;outline:none}
+    .control:focus{box-shadow:0 0 0 3px var(--ring)}
+
+    footer{border-top:1px solid var(--border);padding:28px 0;color:#9db0cf}
+
+    /* Mobile */
+    @media (max-width: 920px){
+      .hero-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .nav-links{display:none}
+    }
   </style>
 </head>
 <body>
+  <!-- Top chip -->
+  <a class="chip container" style="justify-content:center;display:block;text-align:center;margin-top:8px" href="#contact" aria-label="Skip to contact">💬 Get a same‑day quote — we answer fast</a>
+
   <header>
-    <h1>All of the Above Inspections</h1>
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="theme-switch" aria-label="Color theme selector">
-      <span style="opacity:.9">Theme:</span>
-      <button data-theme="ocean" class="active">Ocean</button>
-      <button data-theme="sand">Sand</button>
-      <button data-theme="charcoal">Charcoal</button>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#top" aria-label="All of the Above Inspections home">
+          <span class="logo" aria-hidden="true"></span>
+          <span>All of the Above Inspections</span>
+        </a>
+        <div class="nav-links" role="navigation" aria-label="Primary">
+          <a href="#services">Services</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#process">Process</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="btn" href="tel:+14079529825" aria-label="Call 407-952-9825">📞 Call 407‑952‑9825</a>
+      </nav>
     </div>
   </header>
 
-  <div class="promo">💰 <strong>Bundle & save:</strong> 4-Point + Wind Mit only $200 — or go all-in with Buyer’s + 4-Point + Wind Mit for $525. <a href="#pricing">See deals</a> <a href="#contact" class="btn btn-accent" style="margin-left:.6rem">Get Started</a></div>
+  <main id="top" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-card">
+        <span class="badge">New Smyrna Beach • Volusia County</span>
+        <h1>Buy with confidence.<br/>We make home inspections <em>crystal clear</em>.</h1>
+        <p class="lead">Fast scheduling, thorough on‑site inspections, and photo‑rich reports with plain‑English explanations. We treat every home like it’s our own.</p>
+        <div class="grid grid-2" style="margin-top:.8rem">
+          <ul class="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.45rem">
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div><strong>Buyer & Pre‑Listing</strong> Inspections</div></li>
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div><strong>4‑Point & Wind‑Mit</strong> (insurance forms)</div></li>
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div><strong>New‑Build / 11‑Month</strong> Warranty</div></li>
+          </ul>
+          <ul class="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.45rem">
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>Same‑day <strong>verbal recap</strong></div></li>
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>48‑hour <strong>digital report</strong>*</div></li>
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>Easy <strong>online booking</strong></div></li>
+          </ul>
+        </div>
+        <div style="display:flex;gap:.7rem;align-items:center;margin-top:1rem;flex-wrap:wrap">
+          <a class="btn" href="#contact">Get a Quote</a>
+          <a class="btn secondary" href="mailto:christopher@alloftheaboveinspections.com?subject=Inspection%20Request&body=Hi%20Christopher,%0A%0AI'd%20like%20to%20book%20an%20inspection.%20Here%20are%20the%20details:%0A-%20Property%20address:%0A-%20Type%20(buyer/pre-list/wind-mit/4-point/11-month):%0A-%20Target%20date:%0A-%20Phone:%0A%0AThanks!" rel="nofollow">Email Us</a>
+          <a class="btn ghost" href="tel:+14079529825">Get Pricing</a>
+          <span class="badge">* Most reports delivered within 24–48 hrs</span>
+        </div>
+      </div>
 
-  <section class="hero">
-    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&q=80&w=1600&auto=format&fit=crop" alt="Florida home exterior" />
-    <div class="hero-text">
-      <h1>Buy with Confidence</h1>
-      <p>Trusted home inspections in New Smyrna Beach & Volusia County</p>
-      <a href="#contact" class="btn btn-accent" style="margin-top:1rem">Book Now</a>
+      <figure class="hero-figure" aria-label="Home exterior">
+        <img src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c08e?q=80&w=1400&auto=format&fit=crop"
+             alt="A well-kept Florida home exterior at sunset"
+             referrerpolicy="no-referrer"
+             loading="eager"
+             onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1400&auto=format&fit=crop';" />
+      </figure>
     </div>
-  </section>
+  </main>
 
-  <section id="services" class="container">
-    <h2>Inspection Services</h2>
-    <div class="grid grid-3">
+  <section id="trust">
+    <div class="container grid grid-3">
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1560185008-5b196d0d27b1?q=80&w=1000&auto=format&fit=crop" alt="Home inspection report checklist on clipboard" style="width:100%; border-radius:6px; margin-bottom:1rem; aspect-ratio: 16/10; object-fit: cover; background:#eef2f7" referrerpolicy="no-referrer" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1000&auto=format&fit=crop';" />
-        <h3>Buyer’s Home Inspection</h3>
-        <p>Full top-to-bottom inspection with photos and clear recommendations so you can negotiate confidently.</p>
+        <h3>Professional & Thorough</h3>
+        <p class="lead">Clear, photo‑rich reports that highlight what matters and why — no confusing jargon.</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1581091870622-1c07d1ab3dfe?ixlib=rb-4.0.3&q=80&w=800&auto=format&fit=crop" alt="Wind mitigation inspection" style="width:100%; border-radius:6px; margin-bottom:1rem;"/>
-        <h3>4-Point / Wind Mitigation</h3>
-        <p>Insurance-friendly documentation focused on roof, HVAC, electrical, and plumbing + wind mitigation features.</p>
+        <h3>Friendly, On‑Time Service</h3>
+        <p class="lead">We show up prepared, respect your time, and walk you through findings on site.</p>
       </div>
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1581093588401-22b1f928d3d0?ixlib=rb-4.0.3&q=80&w=800&auto=format&fit=crop" alt="Pre-listing home inspection" style="width:100%; border-radius:6px; margin-bottom:1rem;"/>
-        <h3>Pre-Listing / 11-Month Warranty</h3>
-        <p>Fix surprises before listing, or address warranty items before they become your expense.</p>
-      </div>
-    </div>
-  </section>
-  <section id="pricing" class="container">
-    <h2>Transparent Pricing</h2>
-    <p>We believe in simple, up-front pricing. No hidden fees — what you see is what you pay.</p>
-
-    <table class="pricing">
-      <tr>
-        <th>Service</th>
-        <th>Price</th>
-        <th>Notes</th>
-      </tr>
-      <tr>
-        <td>Buyer’s Home Inspection (up to 2000 sq ft)</td>
-        <td>$350</td>
-        <td>Includes photo-rich report</td>
-      </tr>
-      <tr>
-        <td>Buyer’s Home Inspection (2000–3000 sq ft)</td>
-        <td>$425</td>
-        <td>+$50 per additional 500 sq ft above 3000</td>
-      </tr>
-      <tr>
-        <td>4-Point Insurance Inspection</td>
-        <td>$125</td>
-        <td>Carrier-ready form & photos</td>
-      </tr>
-      <tr>
-        <td>Wind Mitigation Inspection</td>
-        <td>$125</td>
-        <td>May qualify for policy discounts</td>
-      </tr>
-      <tr>
-        <td>Pre-Listing / Seller’s Inspection</td>
-        <td>Starting at $300</td>
-        <td>Prepares punch list before listing</td>
-      </tr>
-      <tr>
-        <td>11-Month Builder’s Warranty Inspection</td>
-        <td>Starting at $300</td>
-        <td>Address warranty items before coverage ends</td>
-      </tr>
-    </table>
-
-    <div class="grid" style="margin-top:1.25rem">
-      <div class="card" style="border-left:6px solid var(--accent)">
-        <h3 style="margin-top:0">Bundles & Savings</h3>
-        <ul style="margin:0; padding-left:1.1rem; line-height:1.6">
-          <li><strong>4-Point + Wind Mit Combo — <span class="discount">$200</span></strong> <span style="background:var(--promo-bg);color:var(--brand);border:1px solid var(--promo-border);border-radius:999px;padding:0 .5rem;font-size:.85rem;margin-left:.3rem">Save $50</span></li>
-          <li><strong>Buyer’s Inspection + Wind Mit — <span class="discount">$450</span></strong> <span style="background:var(--promo-bg);color:var(--brand);border:1px solid var(--promo-border);border-radius:999px;padding:0 .5rem;font-size:.85rem;margin-left:.3rem">Save $25</span></li>
-          <li><strong>Buyer’s Inspection + 4-Point — <span class="discount">$450</span></strong> <span style="background:var(--promo-bg);color:var(--brand);border:1px solid var(--promo-border);border-radius:999px;padding:0 .5rem;font-size:.85rem;margin-left:.3rem">Save $25</span></li>
-          <li><strong>Buyer’s + 4-Point + Wind Mit — <span class="discount">$525</span></strong> <span style="background:var(--promo-bg);color:var(--brand);border:1px solid var(--promo-border);border-radius:999px;padding:0 .5rem;font-size:.85rem;margin-left:.3rem">Best Value</span></li>
-        </ul>
-        <p style="margin:.75rem 0 0; font-size:.9rem; color:var(--muted)">Bundle pricing applies to the same property & appointment. Perfect for maximizing value and minimizing hassle.</p>
-      </div>
-
-      <div class="card" style="border-left:6px solid var(--brand)">
-        <h3 style="margin-top:0">Good to know</h3>
-        <ul style="margin:0; padding-left:1.1rem; line-height:1.6">
-          <li><strong>Travel fee:</strong> $0 within primary service area (NSB/Edgewater/Port Orange/Daytona). Modest fee may apply beyond.</li>
-          <li><strong>Re-inspection:</strong> $100 (targeted follow-up on repairs).</li>
-          <li><strong>Rush delivery:</strong> +$50 for same-day PDF when available.</li>
-          <li><strong>Payment:</strong> Cash, card, or invoice at time of service.</li>
-        </ul>
-      </div>
-    </div>
-
-    <p style="margin-top:1rem; font-size:.9rem; color:var(--muted);">* Prices may vary for larger homes or unique properties. Call us for a custom quote.</p>
-    <p style="margin:.25rem 0 0"><a href="#contact" class="btn btn-brand">Get an exact quote</a></p>
-  </section>
-
-  <section id="reviews" class="container">
-    <h2>What Clients Say</h2>
-    <div class="grid grid-3">
-      <div class="card">
-        <p>“Thorough, friendly, and the report made it easy to negotiate repairs. Highly recommend.”</p>
-        <p><strong>— Home buyer in NSB</strong></p>
-      </div>
-      <div class="card">
-        <p>“Scheduling was quick, communication was great, and the wind-mit saved us on insurance.”</p>
-        <p><strong>— Local homeowner</strong></p>
-      </div>
-      <div class="card">
-        <p>“Detailed report and easy to read. We felt confident moving forward with our purchase.”</p>
-        <p><strong>— First-time buyers</strong></p>
+        <h3>Local Expertise</h3>
+        <p class="lead">New Smyrna Beach & Volusia County homes face unique coastal conditions — we know what to look for.</p>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="container">
-    <h2>Get a Quote</h2>
-    <p>Call us at <a href="tel:+14079529825">407-952-9825</a> or email <a href="mailto:christopher@alloftheaboveinspections.com">christopher@alloftheaboveinspections.com</a>.</p>
+  <section id="services">
+    <div class="container">
+      <h2>Inspection Services</h2>
+      <p class="lead">Straightforward services with up‑front pricing. Call or email for a fast quote.</p>
+      <div class="grid grid-3">
+        <div class="card">
+          <span class="pill">Most Popular</span>
+          <h3>Buyer’s Home Inspection</h3>
+          <p>Full top‑to‑bottom inspection with photos and clear recommendations so you can negotiate confidently.</p>
+          <ul class="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.45rem">
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>Roof, exterior, structure</div></li>
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>HVAC, plumbing, electrical</div></li>
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>Attic, insulation, interiors</div></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>4‑Point / Wind Mitigation</h3>
+          <p>Insurance‑friendly documentation focused on roof, HVAC, electrical, and plumbing + wind mitigation features.</p>
+          <ul class="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.45rem">
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>Forms provided for your carrier</div></li>
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>Great for policy discounts</div></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Pre‑Listing / 11‑Month</h3>
+          <p>Fix surprises before listing, or address warranty items before they become your expense.</p>
+          <ul class="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.45rem">
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>Seller‑ready punch list</div></li>
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>New‑build warranty checks</div></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="pricing">
+    <div class="container">
+      <h2>Transparent Pricing</h2>
+      <p class="lead">Simple, up‑front pricing. No hidden fees — call for an exact quote.</p>
+
+      <table style="width:100%;border-collapse:collapse;margin-top:.8rem">
+        <tr>
+          <th style="text-align:left;border:1px solid var(--border);padding:.9rem;background:#0c2343;color:#cfe4ff;border-color:#21406c">Service</th>
+          <th style="text-align:left;border:1px solid var(--border);padding:.9rem;background:#0c2343;color:#cfe4ff;border-color:#21406c">Typical Price</th>
+          <th style="text-align:left;border:1px solid var(--border);padding:.9rem;background:#0c2343;color:#cfe4ff;border-color:#21406c">What’s included</th>
+        </tr>
+        <tr style="border-left:6px solid var(--brand)">
+          <td style="border:1px solid var(--border);padding:.9rem">Buyer’s Home Inspection (≤ 2000 sq ft)</td>
+          <td style="border:1px solid var(--border);padding:.9rem">$350</td>
+          <td style="border:1px solid var(--border);padding:.9rem">Full inspection + photo‑rich digital report</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid var(--border);padding:.9rem">Buyer’s Home Inspection (2000–3000 sq ft)</td>
+          <td style="border:1px solid var(--border);padding:.9rem">$425</td>
+          <td style="border:1px solid var(--border);padding:.9rem">+$50 per additional 500 sq ft above 3000</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid var(--border);padding:.9rem">4‑Point Insurance Inspection</td>
+          <td style="border:1px solid var(--border);padding:.9rem">$125</td>
+          <td style="border:1px solid var(--border);padding:.9rem">Carrier‑ready form & required photos</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid var(--border);padding:.9rem">Wind Mitigation Inspection</td>
+          <td style="border:1px solid var(--border);padding:.9rem">$125</td>
+          <td style="border:1px solid var(--border);padding:.9rem">Wind‑mit features documented for discounts</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid var(--border);padding:.9rem">Pre‑Listing / Seller’s Inspection</td>
+          <td style="border:1px solid var(--border);padding:.9rem">Starting at $300</td>
+          <td style="border:1px solid var(--border);padding:.9rem">Prepares punch list before listing</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid var(--border);padding:.9rem">11‑Month Builder’s Warranty Inspection</td>
+          <td style="border:1px solid var(--border);padding:.9rem">Starting at $300</td>
+          <td style="border:1px solid var(--border);padding:.9rem">Address warranty items before coverage ends</td>
+        </tr>
+      </table>
+
+      <div class="grid" style="margin-top:1.25rem">
+        <div class="card" style="border-left:6px solid var(--brand)">
+          <h3 style="margin-top:0">Bundles & Savings</h3>
+          <ul class="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.45rem">
+            <li><strong>4‑Point + Wind Mit — $200</strong> <span style="display:inline-block;background:#0c2343;color:#9ecfff;border:1px solid #21406c;border-radius:999px;padding:.2rem .55rem;font-size:.85rem;margin-left:.35rem">Save $50</span></li>
+            <li><strong>Buyer’s + Wind Mit — $450</strong> <span style="display:inline-block;background:#0c2343;color:#9ecfff;border:1px solid #21406c;border-radius:999px;padding:.2rem .55rem;font-size:.85rem;margin-left:.35rem">Save $25</span></li>
+            <li><strong>Buyer’s + 4‑Point — $450</strong> <span style="display:inline-block;background:#0c2343;color:#9ecfff;border:1px solid #21406c;border-radius:999px;padding:.2rem .55rem;font-size:.85rem;margin-left:.35rem">Save $25</span></li>
+            <li><strong>Buyer’s + 4‑Point + Wind Mit — $525</strong> <span style="display:inline-block;background:#0c2343;color:#9ecfff;border:1px solid #21406c;border-radius:999px;padding:.2rem .55rem;font-size:.85rem;margin-left:.35rem">Best Value</span></li>
+          </ul>
+          <p class="muted" style="margin:.75rem 0 0">Bundle pricing applies to the same property & appointment.</p>
+        </div>
+        <div class="card" style="border-left:6px solid #0ea5e9">
+          <h3 style="margin-top:0">Good to know</h3>
+          <ul class="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.45rem">
+            <li><strong>Travel fee:</strong> $0 within the primary service area</li>
+            <li><strong>Re‑inspection:</strong> $100 targeted follow‑up</li>
+            <li><strong>Rush delivery:</strong> +$50 for same‑day PDF when available</li>
+            <li><strong>Payment:</strong> Cash, card, or invoice at time of service</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:1rem;display:flex;gap:.7rem;flex-wrap:wrap">
+        <a class="btn" href="tel:+14079529825">Call for Pricing</a>
+        <a class="btn secondary" href="#contact">Get an exact quote</a>
+      </div>
+
+      <p class="muted" style="margin-top:.8rem;font-size:.9rem">* Prices may vary for larger homes or unique properties.</p>
+    </div>
+  </section>
+
+
+  <section id="process">
+    <div class="container">
+      <h2>How it works</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>1) Schedule</h3>
+          <p>Call, text, or email with the property address and your target date. We’ll confirm right away.</p>
+        </div>
+        <div class="card">
+          <h3>2) Inspect</h3>
+          <p>We inspect the home and review priority items with you on site. You’ll always know what’s urgent vs nice‑to‑have.</p>
+        </div>
+        <div class="card">
+          <h3>3) Report</h3>
+          <p>Receive a clean, photo‑rich report (often within 24–48 hours) that’s easy to share with agents or insurers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <h2>What clients say</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <div style="display:inline-flex;gap:3px" aria-label="5 out of 5 stars">
+            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          </div>
+          <p>“Thorough, friendly, and the report made it easy to negotiate repairs. Highly recommend.”</p>
+          <p class="muted">— Home buyer in NSB</p>
+        </div>
+        <div class="card">
+          <div style="display:inline-flex;gap:3px" aria-label="5 out of 5 stars">
+            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          </div>
+          <p>“Scheduling was quick, communication was great, and the wind‑mit saved us on insurance.”</p>
+          <p class="muted">— Local homeowner</p>
+        </div>
+        <div class="card">
+          <div style="display:inline-flex;gap:3px" aria-label="5 out of 5 stars">
+            <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+          </div>
+          <p>“Detailed report and easy to read. We felt confident moving forward with our purchase.”</p>
+          <p class="muted">— First‑time buyers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="area">
+    <div class="container">
+      <h2>Service area</h2>
+      <p class="lead">New Smyrna Beach • Edgewater • Port Orange • Daytona Beach • Ormond Beach • Deltona • DeLand</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>How quickly will I get my report?</h3>
+          <p>Most reports are delivered within 24–48 hours. You’ll also get a verbal recap on site so you’re never waiting for the big picture.</p>
+        </div>
+        <div class="card">
+          <h3>Can I attend the inspection?</h3>
+          <p>Absolutely. Walk with us and ask questions — we’ll point out what we see and why it matters.</p>
+        </div>
+        <div class="card">
+          <h3>Do you do wind‑mit and 4‑point?</h3>
+          <p>Yes. We can complete the insurance forms and include needed photos.</p>
+        </div>
+        <div class="card">
+          <h3>How do I book?</h3>
+          <p>Use the contact form below, email <a href="mailto:christopher@alloftheaboveinspections.com">christopher@alloftheaboveinspections.com</a>, or call <a href="tel:+14079529825">407‑952‑9825</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Get a fast quote</h2>
+      <p class="lead">Tell us about the property and your timeline. We’ll confirm availability right away.</p>
+      <div class="grid grid-2">
+        <form class="card" action="https://formspree.io/f/your-id" method="POST" aria-label="Contact form">
+          <label for="name">Name</label>
+          <div class="field"><input id="name" name="name" required placeholder="Your name" class="control" /></div>
+
+          <label for="email">Email</label>
+          <div class="field"><input id="email" type="email" name="email" required placeholder="you@email.com" class="control" /></div>
+
+          <label for="phone">Phone</label>
+          <div class="field"><input id="phone" name="phone" placeholder="407‑952‑9825" class="control" /></div>
+
+          <label for="message">Details</label>
+          <div class="field"><textarea id="message" name="message" rows="5" required placeholder="Address, service type (buyer/wind‑mit/4‑point/etc.), and target date" class="control"></textarea></div>
+
+          <button class="btn" type="submit">Send</button>
+          <p class="lead" style="font-size:.95rem;color:#9fb4d7">Prefer email? <a href="mailto:christopher@alloftheaboveinspections.com">christopher@alloftheaboveinspections.com</a></p>
+        </form>
+
+        <div class="card">
+          <h3>Contact</h3>
+          <p><strong>Phone:</strong> <a href="tel:+14079529825">407‑952‑9825</a><br/>
+             <strong>Email:</strong> <a href="mailto:christopher@alloftheaboveinspections.com">christopher@alloftheaboveinspections.com</a><br/>
+             <strong>Based in:</strong> New Smyrna Beach, FL</p>
+
+          <h3 style="margin-top:1rem">Why choose us</h3>
+          <ul class="list" style="list-style:none;padding:0;margin:0;display:grid;gap:.45rem">
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>Photo‑rich, easy‑to‑read reports</div></li>
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>Friendly help before & after the inspection</div></li>
+            <li style="display:flex;gap:.6rem"><span class="check">✓</span><div>Local, small‑business service</div></li>
+          </ul>
+
+          <div style="margin-top:1rem;display:flex;gap:.5rem;flex-wrap:wrap">
+            <span class="badge">Licensed & Insured</span>
+            <span class="badge">Agent‑friendly</span>
+            <span class="badge">Reports in 24–48 hrs</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>© <span id="y"></span> All of the Above Inspections • New Smyrna Beach, FL</p>
+    <div class="container" style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between">
+      <div>© <span id="y"></span> All of the Above Inspections • New Smyrna Beach, FL</div>
+      <div style="display:flex;gap:.5rem;align-items:center">
+        <a class="badge" href="#top">Back to top ↑</a>
+        <a class="badge" href="mailto:christopher@alloftheaboveinspections.com">Email</a>
+        <a class="badge" href="tel:+14079529825">Call</a>
+      </div>
+    </div>
   </footer>
 
   <script>
-    // current year
     document.getElementById('y').textContent = new Date().getFullYear();
-
-    // Theme switcher with persistence
-    const root = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    if(saved){ root.setAttribute('data-theme', saved); document.querySelectorAll('.theme-switch button').forEach(b=>b.classList.toggle('active', b.dataset.theme===saved)); }
-    document.querySelectorAll('.theme-switch button').forEach(btn=>{
-      btn.addEventListener('click', ()=>{
-        root.setAttribute('data-theme', btn.dataset.theme);
-        localStorage.setItem('theme', btn.dataset.theme);
-        document.querySelectorAll('.theme-switch button').forEach(b=>b.classList.remove('active'));
-        btn.classList.add('active');
-      });
-    });
   </script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "All of the Above Inspections",
+    "url": "https://alloftheaboveinspections.com/",
+    "areaServed": ["New Smyrna Beach", "Volusia County"],
+    "email": "christopher@alloftheaboveinspections.com",
+    "telephone": "+1-407-952-9825",
+    "image": "https://images.unsplash.com/photo-1502005229762-cf1b2da7c08e?q=80&w=1200&auto=format&fit=crop",
+    "description": "Home inspections in New Smyrna Beach and surrounding areas. Buyer, pre-listing, 4-point, wind mitigation, and 11-month warranty inspections.",
+    "address": {"@type":"PostalAddress","addressLocality":"New Smyrna Beach","addressRegion":"FL","addressCountry":"US"},
+    "serviceType": ["Home Buyer Inspection","Pre-Listing Inspection","4-Point Inspection","Wind Mitigation Inspection","11-Month Warranty Inspection"]
+  }
+  </script>
+
+  <noscript>
+    <div class="container" style="margin:1rem 0;color:#cfe4ff">JavaScript is disabled — forms still work, and all core content is visible.</div>
+  </noscript>
 </body>
 </html>
