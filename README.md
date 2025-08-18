@@ -1,17 +1,12 @@
-# All of the Above Inspections — Quick Site Fix
+# All of the Above Inspections — Static Site
 
-This bundle updates:
-- Email address everywhere to **christopher@alloftheaboveinspections.com**
-- Attic Insulation image block to a clean, responsive picture (placeholder provided)
+This repo contains a single-file website with built-in theme switcher and transparent pricing.
 
-## Deploy steps
-1) Upload/replace files in your repo:
-   - Put `index.html` at your site root.
-   - Put `assets/images/attic-insulation.svg` in the same path structure.
-2) Commit & push, let Netlify build.
-3) In Netlify → Site settings → Forms → Notifications, set the **contact** form to send to **christopher@alloftheaboveinspections.com**.
-4) Optional: Replace the placeholder SVG with a real photo:
-   - Save your photo as `/assets/images/attic-insulation.jpg` (and optionally `.webp`)
-   - Update the `<picture>` sources in `index.html` if desired.
+## How to deploy on GitHub Pages
+1. Create a new GitHub repo and upload these files to the repo **root** (not in a subfolder): `index.html`, `robots.txt`, `sitemap.xml`.
+2. Go to **Settings → Pages** and set **Source** to "Deploy from a branch" → `main` → `/ (root)`.
+3. Wait for Pages to build, then visit your site URL shown at the top of the Pages settings.
 
-Need help placing these into your framework (React/Next/Vite/Jekyll/etc.)? Tell me your stack and file paths.
+## Optional
+- Update links in `sitemap.xml` to match your real domain.
+- Replace the form endpoint if/when you add a form.
