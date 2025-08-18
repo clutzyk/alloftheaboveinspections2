@@ -5,286 +5,172 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home Inspector in New Smyrna Beach, FL | All of the Above Inspections</title>
   <meta name="description" content="Certified home inspections in New Smyrna Beach & Volusia County. Same-day photo reports, 4-Point & Wind Mitigation, pool/spa, and mold testing. Call 407-952-9825." />
-  <link rel="canonical" href="https://YOUR-DOMAIN.com/" />
+  <link rel="canonical" href="https://alloftheaboveinspections.com/" />
   <meta name="theme-color" content="#0284c7" />
+
   <!-- Open Graph / Social -->
   <meta property="og:title" content="All of the Above Inspections — New Smyrna Beach Home Inspector" />
   <meta property="og:description" content="Clear, same-day inspection reports with photos. 4-Point, Wind Mitigation, Pool/Spa & Mold testing." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://YOUR-DOMAIN.com/" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1600&auto=format&fit=crop" />
-  <meta name="twitter:card" content="summary_large_image"/>
+  <meta property="og:url" content="https://alloftheaboveinspections.com/" />
+  <meta property="og:image" content="https://alloftheaboveinspections.com/og-image.jpg" />
+
   <style>
-    :root{--sky:#0284c7;--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--bg:#f8fafc;--card:#fff;}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-    a{color:var(--sky);text-decoration:none}
-    header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--line)}
-    .wrap{max-width:1100px;margin:0 auto;padding:12px 16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand-badge{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#38bdf8,#10b981)}
-    .brand-title{font-weight:800;letter-spacing:-.2px}
-    .btn{display:inline-block;padding:12px 16px;border-radius:14px;font-weight:600}
-    .btn-primary{background:var(--sky);color:#fff}
-    .btn-outline{border:1px solid var(--line);color:var(--ink);background:#fff}
-    .section{padding:40px 0}
-    .hero{background:linear-gradient(135deg,#fff,#f1f5f9);border-bottom:1px solid var(--line)}
-    h1{font-size:34px;margin:12px 0}
-    h2{font-size:28px;margin:0 0 6px}
-    h3{margin:0 0 6px}
-    p.lead{font-size:18px;color:var(--muted);margin:8px 0 0}
-    .pill{display:inline-block;font-size:12px;color:#0369a1;font-weight:700;padding:6px 10px;border-radius:999px;background:rgba(2,132,199,.12);}
-    .grid{display:grid;gap:18px}
-    @media(min-width:900px){.grid-2{grid-template-columns:1fr 1fr} .grid-3{grid-template-columns:1fr 1fr 1fr}}
-    .hero-img{width:100%;max-height:420px;object-fit:cover;border-radius:24px;box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
-    ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
-    .kicker{text-transform:uppercase;letter-spacing:.1em;font-size:12px;color:#334155}
-
-    /* Gallery */
-    .gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    @media(min-width:900px){.gallery-grid{grid-template-columns:1fr 1fr 1fr}}
-    .thumb{height:190px;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:#fff;position:relative}
-    .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .2s ease}
-    .thumb:hover img{transform:scale(1.04)}
-    .caption{padding:6px 10px;font-size:12px;color:#var(--muted)}
-    .small{font-size:14px;color:#64748b}
-    footer{border-top:1px solid var(--line);background:#fff}
-
-    /* Sticky CTA */
-    .sticky-cta{position:fixed;right:16px;bottom:16px;background:#0ea5e9;color:#fff;border-radius:999px;padding:12px 16px;font-weight:700;box-shadow:0 10px 25px rgba(2,132,199,.35)}
-
-    /* Mobile nav helper */
-    @media(max-width:720px){ .hide-mobile{display:none} }
-
-    /* Lightbox */
-    .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
-    .lightbox.open{display:flex}
-    .lightbox img{max-height:85vh;width:auto;border-radius:16px;box-shadow:0 25px 50px -12px rgba(0,0,0,.5)}
-    .close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,.9);border:0;border-radius:12px;padding:8px 12px;font-weight:700;color:#0f172a;cursor:pointer}
+    :root { --brand:#0284c7; --ink:#0f172a; --muted:#475569; --bg:#f8fafc; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--ink); background:#fff; }
+    header, footer { background: var(--bg); }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 1.25rem; }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .brand { display:flex; align-items:center; gap:.75rem; font-weight:700; font-size:1.1rem; }
+    .contact { display:flex; gap:1rem; flex-wrap:wrap; align-items:center; }
+    .btn { display:inline-block; background:var(--brand); color:#fff; padding:.65rem 1rem; border-radius:.75rem; font-weight:600; }
+    .btn:hover { filter:brightness(.95); text-decoration:none; }
+    .hero { padding: 3rem 0 2rem; }
+    .hero h1 { font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0 0 .5rem; }
+    .hero p { color: var(--muted); margin: 0 0 1rem; }
+    .grid { display:grid; grid-template-columns: 1fr; gap:1.5rem; }
+    @media (min-width: 900px) { .grid { grid-template-columns: 1.2fr .8fr; } }
+    .card { background:#fff; border:1px solid #e2e8f0; border-radius:1rem; padding:1rem; }
+    .section { padding: 2rem 0; }
+    .section h2 { margin: 0 0 .5rem; font-size: clamp(1.4rem, 2.2vw, 1.9rem); }
+    .muted { color: var(--muted); }
+    picture, img { width:100%; height:auto; border-radius: .75rem; }
+    form label { display:block; font-weight:600; margin:.35rem 0 .25rem; }
+    form input, form textarea { width:100%; padding:.7rem .8rem; border:1px solid #cbd5e1; border-radius:.6rem; font:inherit; }
+    form textarea { min-height:140px; resize:vertical; }
+    form .row { display:grid; grid-template-columns: 1fr; gap:.75rem; }
+    @media (min-width: 700px) { form .row { grid-template-columns: 1fr 1fr; } }
+    .footgrid { display:grid; grid-template-columns: 1fr; gap:1rem; }
+    @media (min-width: 800px) { .footgrid { grid-template-columns: 1.3fr .7fr; } }
+    footer p { margin:.25rem 0; }
+    .small { font-size:.9rem; }
   </style>
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+
+  <!-- JSON-LD: Business details -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "All of the Above Inspections",
+    "url": "https://alloftheaboveinspections.com",
+    "email": "mailto:christopher@alloftheaboveinspections.com",
+    "telephone": "407-952-9825",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New Smyrna Beach",
+      "addressRegion": "FL",
+      "postalCode": "32168",
+      "addressCountry": "US"
+    },
+    "areaServed": "Volusia County, Florida"
+  }
+  </script>
 </head>
 <body>
-  <a class="sticky-cta" href="#contact">Book an Inspection</a>
-  <header>
-    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;">
-      <a class="brand" href="./" aria-label="All of the Above Inspections Home">
-        <div class="brand-badge"></div>
-        <div>
-          <div class="brand-title">All of the Above <span style="color:#0284c7">Inspections</span></div>
-          <div class="small">New Smyrna Beach, FL</div>
-        </div>
-      </a>
-      <nav class="hide-mobile">
-        <a class="btn btn-outline" href="#pricing">Pricing</a>
-        <a class="btn btn-primary" href="#contact">Call 407‑952‑9825</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero -->
-  <section class="hero section">
-    <div class="wrap grid grid-2" style="align-items:center">
+<header>
+  <div class="wrap topbar">
+    <div class="brand">All of the Above Inspections</div>
+    <div class="contact small">
+      <a href="mailto:christopher@alloftheaboveinspections.com">christopher@alloftheaboveinspections.com</a>
+      <span>•</span>
+      <a href="tel:+14079529825">407-952-9825</a>
+      <a class="btn" href="#contact">Get an Inspection</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap grid">
       <div>
-        <div class="kicker">Home Inspector • New Smyrna Beach & Volusia County</div>
-        <h1>Clear, Same‑Day <span style="color:#0284c7">Home Inspections</span></h1>
-        <p class="lead">Detailed photo reports with repair recommendations. 4‑Point & Wind Mitigation for insurance, plus Pool/Spa & Mold testing.</p>
-        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn btn-primary" href="#contact">Schedule an Inspection</a>
-          <a class="btn btn-outline" href="#services">Services</a>
-          <a class="btn btn-outline" href="#faq">FAQ</a>
-        </div>
-        <ul class="small" style="margin-top:10px">
-          <li>Licensed & insured • InterNACHI/ASHI standards</li>
-          <li>Same‑day digital report (PDF + photos)</li>
-          <li>Friendly, realtor‑ready communication</li>
-        </ul>
-      </div>
-      <div><img class="hero-img" src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1600&auto=format&fit=crop" alt="Florida home exterior"></div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section">
-    <div class="wrap">
-      <h2>Home Inspection Services</h2>
-      <p class="small">Thorough, standards‑compliant inspections with clear explanations and photos.</p>
-      <div class="grid grid-3" style="margin-top:14px">
-        <div class="card">
-          <h3>Standard Home Inspection</h3>
-          <p class="small">Roof, exterior, structure, electrical, plumbing, HVAC, interior, appliances, attic & crawlspaces where accessible.</p>
-        </div>
-        <div class="card">
-          <h3>Insurance Inspections</h3>
-          <p class="small">4‑Point (roof/HVAC/electrical/plumbing) and Wind Mitigation for insurance savings and underwriting requirements.</p>
-        </div>
-        <div class="card">
-          <h3>Add‑Ons</h3>
-          <p class="small">Pool/Spa inspection, Mold testing, and Re‑inspections.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
-  <section id="pricing" class="section" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-    <div class="wrap grid grid-2">
-      <div class="card">
-        <h3>Standard Home Inspection</h3>
-        <ul>
-          <li>Up to 1,500 sq ft — $300</li>
-          <li>1,501 – 2,000 sq ft — $325</li>
-          <li>2,001 – 2,500 sq ft — $350</li>
-          <li>2,501 – 3,000 sq ft — $375</li>
-        </ul>
-        <div class="small" style="margin-top:6px">Older home (40+ yrs) surcharge: +$50</div>
+        <h1>Certified Home Inspections in New Smyrna Beach</h1>
+        <p class="muted">Same-day photo reports. 4-Point &amp; Wind Mitigation. Pool/Spa. Mold testing. Serving New Smyrna Beach and all of Volusia County.</p>
+        <p>
+          <a class="btn" href="#contact">Request an Inspection</a>
+          &nbsp; or email <a href="mailto:christopher@alloftheaboveinspections.com">christopher@alloftheaboveinspections.com</a>
+        </p>
       </div>
       <div class="card">
-        <h3>Add‑On Services</h3>
-        <ul>
-          <li>4‑Point Inspection — +$100</li>
-          <li>Wind Mitigation — +$100</li>
-          <li>Pool/Spa Inspection — +$75</li>
-          <li>Mold Testing (starting) — +$200</li>
-          <li>Re‑inspection (≤30 days) — $125</li>
+        <h2>Attic Insulation Check</h2>
+        <p class="muted">We assess insulation depth (target R-38 to R-49 for Florida), coverage, ventilation and signs of moisture or pests.</p>
+        <picture>
+          <source srcset="/assets/images/attic-insulation.svg" type="image/svg+xml">
+          <img src="/assets/images/attic-insulation.svg" alt="Inspector checking attic insulation depth and ventilation" loading="lazy" width="1200" height="800">
+        </picture>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid">
+      <div class="card">
+        <h2>Our Services</h2>
+        <ul class="muted">
+          <li>Buyer &amp; Seller Home Inspections</li>
+          <li>4-Point Insurance Inspections</li>
+          <li>Wind Mitigation Inspections</li>
+          <li>Pool &amp; Spa Inspections</li>
+          <li>Mold Sampling &amp; Air Quality</li>
+          <li>Pre-Listing &amp; Annual Maintenance Checks</li>
         </ul>
-        <div class="small" style="margin-top:6px">Bundle & save: Ask about Standard + 4‑Point + Wind Mitigation packages.</div>
+      </div>
+      <div id="contact" class="card">
+        <h2>Contact Us</h2>
+        <p class="muted">Fill this form and we’ll reach out within one business day.</p>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden" style="display:none;">
+            <label>Don’t fill this out: <input name="bot-field" /></label>
+          </p>
+          <div class="row">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" required>
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" name="phone" placeholder="407-952-9825">
+            </div>
+            <div>
+              <label for="service">Service</label>
+              <input id="service" type="text" name="service" placeholder="Home, 4-Point, Wind Mit, etc.">
+            </div>
+          </div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <p><button class="btn" type="submit">Send</button></p>
+        </form>
+        <p class="small muted">Prefer email? Write us at <a href="mailto:christopher@alloftheaboveinspections.com">christopher@alloftheaboveinspections.com</a></p>
       </div>
     </div>
   </section>
+</main>
 
-  <!-- Service Areas (local SEO) -->
-  <section id="areas" class="section">
-    <div class="wrap">
-      <h2>Service Areas</h2>
-      <p class="small">New Smyrna Beach • Edgewater • Port Orange • Daytona Beach • Ormond Beach • Deltona • DeLand • Orange City</p>
+<footer>
+  <div class="wrap footgrid">
+    <div>
+      <strong>All of the Above Inspections</strong>
+      <p class="small muted">New Smyrna Beach, FL • Volusia County</p>
+      <p class="small"><a href="mailto:christopher@alloftheaboveinspections.com">christopher@alloftheaboveinspections.com</a> • <a href="tel:+14079529825">407-952-9825</a></p>
     </div>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery" class="section">
-    <div class="wrap">
-      <h2>Photo Gallery</h2>
-      <p class="small" style="margin-top:4px">Tap any photo to view larger. Optimized for mobile with fast loading.</p>
-      <div class="gallery-grid" style="margin-top:14px" id="gallery-grid">
-        <figure class="thumb">
-          <img
-            loading="eager"
-            src="https://images.unsplash.com/photo-1600566753851-1179091ef8f5?q=80&w=1200&auto=format&fit=crop&fm=jpg"
-            alt="Attic insulation"
-            data-full="https://images.unsplash.com/photo-1600566753851-1179091ef8f5?q=80&w=2000&auto=format&fit=crop&fm=jpg"
-            referrerpolicy="no-referrer"
-            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1581091870609-38b26f3f7836?q=80&w=1200&auto=format&fit=crop&fm=jpg'"
-          >
-          <figcaption class="caption">Attic insulation & ventilation</figcaption>
-        </figure>
-
-        <figure class="thumb">
-          <img
-            loading="eager"
-            src="https://images.unsplash.com/photo-1505696140061-32a3d5f6c7a0?q=80&w=1200&auto=format&fit=crop&fm=jpg"
-            alt="Plumbing fixtures"
-            data-full="https://images.unsplash.com/photo-1505696140061-32a3d5f6c7a0?q=80&w=2000&auto=format&fit=crop&fm=jpg"
-            referrerpolicy="no-referrer"
-            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200&auto=format&fit=crop&fm=jpg'"
-          >
-          <figcaption class="caption">Plumbing: fixtures & supply lines</figcaption>
-        </figure>
-
-        <figure class="thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop&fm=jpg" alt="Roof detail" data-full="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2000&auto=format&fit=crop&fm=jpg"><figcaption class="caption">Roof covering condition</figcaption></figure>
-        <figure class="thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1200&auto=format&fit=crop&fm=jpg" alt="HVAC system" data-full="https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=2000&auto=format&fit=crop&fm=jpg"><figcaption class="caption">HVAC equipment</figcaption></figure>
-        <figure class="thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1200&auto=format&fit=crop&fm=jpg" alt="Electrical outlets" data-full="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=2000&auto=format&fit=crop&fm=jpg"><figcaption class="caption">Electrical devices</figcaption></figure>
-        <figure class="thumb"><img loading="lazy" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop&fm=jpg" alt="Interior finishes" data-full="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2000&auto=format&fit=crop&fm=jpg"><figcaption class="caption">Interior finishes</figcaption></figure>
-      </div>
-      <div class="lightbox" id="lightbox"><button class="close" id="lightbox-close">Close ✕</button><img id="lightbox-img" alt="Expanded gallery image"></div>
+    <div class="small muted">
+      <p>© <span id="year"></span> All of the Above Inspections. All rights reserved.</p>
     </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="section" style="background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-    <div class="wrap">
-      <h2>FAQ</h2>
-      <details class="card" style="margin-top:12px">
-        <summary><strong>How long does an inspection take?</strong></summary>
-        <p class="small">Usually 2–3 hours for a typical single‑family home, depending on size and condition.</p>
-      </details>
-      <details class="card">
-        <summary><strong>When will I get my report?</strong></summary>
-        <p class="small">Same‑day delivery with photos and clear recommendations in PDF and web format.</p>
-      </details>
-      <details class="card">
-        <summary><strong>Do you offer 4‑Point & Wind Mitigation?</strong></summary>
-        <p class="small">Yes. We complete 4‑Point and Wind Mitigation inspections required by many insurers.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="wrap grid grid-2">
-      <div>
-        <h2>Schedule or Request a Quote</h2>
-        <p class="small">Call or text <strong>407‑952‑9825</strong> or email <a href="mailto:christopher.lutzyk@alloftheaboveinspections.com">christopher.lutzyk@alloftheaboveinspections.com</a></p>
-        <p class="small">Hours: Mon–Sat 8am–6pm • Licensed & insured • New Smyrna Beach, FL</p>
-      </div>
-      <form action="https://formspree.io/f/your-form-id" method="POST" class="card">
-        <h3>Quick Message</h3>
-        <label class="small">Name<input style="width:100%;padding:10px;border:1px solid var(--line);border-radius:12px;margin-top:6px" name="name" required></label><br><br>
-        <label class="small">Email<input style="width:100%;padding:10px;border:1px solid var(--line);border-radius:12px;margin-top:6px" type="email" name="email" required></label><br><br>
-        <label class="small">Phone<input style="width:100%;padding:10px;border:1px solid var(--line);border-radius:12px;margin-top:6px" name="phone"></label><br><br>
-        <label class="small">Message<textarea style="width:100%;padding:10px;border:1px solid var(--line);border-radius:12px;margin-top:6px" name="message" rows="4" placeholder="Tell us about the property size, age, and any add‑ons you need."></textarea></label><br>
-        <button class="btn btn-primary" type="submit">Send</button>
-        <p class="small">Form powered by Formspree (free). Replace <code>your-form-id</code> after you create a form.</p>
-      </form>
-    </div>
-  </section>
-
-  <footer>
-    <div class="wrap" style="padding:24px 16px" class="small">© <span id="year"></span> All of the Above Inspections • New Smyrna Beach, FL</div>
-  </footer>
-
+  </div>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // universal image fallback (uses data-fallback if present)
-    document.addEventListener('error', function(e){
-      const t = e.target;
-      if (t.tagName === 'IMG' && !t.dataset.fallbackTried) {
-        t.dataset.fallbackTried = '1';
-        if (t.dataset.fallback) t.src = t.dataset.fallback;
-      }
-    }, true);
-    // simple lightbox
-    (function(){const g=document.getElementById('gallery-grid');const m=document.getElementById('lightbox');const i=document.getElementById('lightbox-img');const c=document.getElementById('lightbox-close');if(!g||!m||!i)return;g.addEventListener('click',e=>{const t=e.target.closest('img');if(!t)return;i.src=t.getAttribute('data-full')||t.src;m.classList.add('open');});const hide=()=>{m.classList.remove('open');i.removeAttribute('src');};m.addEventListener('click',e=>{if(e.target===m)hide();});c.addEventListener('click',hide);document.addEventListener('keydown',e=>{if(e.key==='Escape')hide();});})();
   </script>
+</footer>
 
-  <!-- Schema: LocalBusiness + FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "All of the Above Inspections",
-    "image": "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=1600&auto=format&fit=crop",
-    "telephone": "+1-407-952-9825",
-    "email": "christopher.lutzyk@alloftheaboveinspections.com",
-    "url": "https://YOUR-DOMAIN.com/",
-    "priceRange": "$$",
-    "address": {"@type":"PostalAddress","addressLocality":"New Smyrna Beach","addressRegion":"FL","addressCountry":"US"},
-    "areaServed": ["New Smyrna Beach","Edgewater","Port Orange","Daytona Beach","Volusia County"],
-    "openingHours": "Mo-Sa 08:00-18:00",
-    "sameAs": []
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"How long does an inspection take?","acceptedAnswer":{"@type":"Answer","text":"Usually 2–3 hours for a typical single-family home, depending on size and condition."}},
-      {"@type":"Question","name":"When will I get my report?","acceptedAnswer":{"@type":"Answer","text":"Same-day delivery with photos and clear recommendations in PDF and web format."}},
-      {"@type":"Question","name":"Do you offer 4-Point & Wind Mitigation?","acceptedAnswer":{"@type":"Answer","text":"Yes. We complete 4-Point and Wind Mitigation inspections required by many insurers."}}
-    ]
-  }
-  </script>
 </body>
 </html>
